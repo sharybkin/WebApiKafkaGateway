@@ -1,0 +1,88 @@
+*.TMP
+
+#Ignore thumbnails created by Windows
+Thumbs.db
+
+#Ignore files built by Visual Studio
+*.obj
+*.user
+*.aps
+*.pch
+*.vspscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.log
+[Bb]in
+[Dd]ebug*/
+*.lib
+*.sbr
+obj/
+[Rr]elease*/
+_ReSharper*/
+[Tt]est[Rr]esult*
+
+.vs/
+.vscode/
+
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
+out/
+[Pb]ublish/
+
+#Nuget packages folder
+packages/
+Var/
+Artifacts/
+.tmp/
+/docs/node_modules/*
+node_modules/
+*.jfm
+*.dbmdl
+
+# ReSharper is a .NET coding add-in
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# for JetBrains Rider
+.idea/
+
+
+# MSTest test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+
+# Visual Studio profiler
+*.psess
+*.vsp
+*.vspx
+*.sap
+
+
+# DotCover is a Code Coverage Tool
+*.dotCover
+**/Properties/launchSettings.json

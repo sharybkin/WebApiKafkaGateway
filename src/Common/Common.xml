@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Common</name>
+    </assembly>
+    <members>
+        <member name="P:Common.Commands.RequestCommands.CreateProductRequestCommand.Name">
+            <summary>
+            Product name
+            </summary>
+        </member>
+        <member name="P:Common.Commands.RequestCommands.CreateProductRequestCommand.Price">
+            <summary>
+            Price with currency
+            </summary>
+        </member>
+        <member name="P:Common.Commands.RequestCommands.CreateProductRequestCommand.ExpirationDate">
+            <summary>
+            The time until which the product remains of high quality
+            </summary>
+        </member>
+        <member name="T:Common.Models.Data.Currency">
+            <summary>
+            Currency with code
+            </summary>
+        </member>
+        <member name="P:Common.Models.Data.Currency.Number">
+            <summary>
+            DigitCode
+            </summary>
+            <example>840</example>
+        </member>
+        <member name="P:Common.Models.Data.Currency.Code">
+            <summary>
+            Code
+            </summary>
+            <example>USD</example>
+        </member>
+        <member name="T:Common.Models.Data.Price">
+            <summary>
+            Product Price with Currency
+            </summary>
+        </member>
+        <member name="T:Common.Models.Data.Product">
+            <summary>
+            Product
+            </summary>
+        </member>
+        <member name="P:Common.Models.Data.Product.Id">
+            <summary>
+            Identity
+            </summary>
+        </member>
+        <member name="P:Common.Models.Data.Product.Name">
+            <summary>
+            Product name
+            </summary>
+        </member>
+        <member name="P:Common.Models.Data.Product.Price">
+            <summary>
+            Price with currency
+            </summary>
+        </member>
+        <member name="P:Common.Models.Data.Product.ExpirationDate">
+            <summary>
+            The time until which the product remains of high quality
+            </summary>
+        </member>
+    </members>
+</doc>

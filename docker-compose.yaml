@@ -1,0 +1,31 @@
+﻿version: '3'
+
+networks:
+  kafka_net:
+    driver: bridge
+    
+services: 
+  zookeeper:
+    image: wurstmeister/zookeeper:latest
+    container_name: zookeeper
+    hostname: zookeeper
+    ports: 
+      - "2181:2181"
+    networks: 
+      - kafka_net
+  kafka:
+    image: wurstmeister/kafka:latest
+    container_name: kafka
+    hostname: kafka
+    ports: 
+      - "9092:9092"
+    depends_on: 
+      - zookeeper
+    environment: 
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_HOST_NAME: kafka
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+    networks: 
+      - kafka_net

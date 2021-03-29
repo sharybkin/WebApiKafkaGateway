@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ProductApi</name>
+    </assembly>
+    <members>
+        <member name="T:ProductApi.Controllers.Models.CreateProductRequest">
+            <summary>
+            Product Request
+            </summary>
+        </member>
+        <member name="P:ProductApi.Controllers.Models.CreateProductRequest.Name">
+            <summary>
+            Product name
+            </summary>
+        </member>
+        <member name="P:ProductApi.Controllers.Models.CreateProductRequest.Price">
+            <summary>
+            Price with currency
+            </summary>
+        </member>
+        <member name="P:ProductApi.Controllers.Models.CreateProductRequest.ExpirationDate">
+            <summary>
+            The time until which the product remains of high quality
+            </summary>
+        </member>
+        <member name="M:ProductApi.Controllers.ProductsController.Get(System.Threading.CancellationToken)">
+            <summary>
+            Retrieves list of products
+            </summary>
+            <returns>Products</returns>
+        </member>
+        <member name="M:ProductApi.Controllers.ProductsController.GetProduct(System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            Retrieves Product by Id
+            </summary>
+            <param name="productId"></param>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ProductApi.Controllers.ProductsController.CreateProduct(ProductApi.Controllers.Models.CreateProductRequest)">
+            <summary>
+            Add new Product
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

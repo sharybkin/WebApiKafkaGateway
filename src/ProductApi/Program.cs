@@ -20,6 +20,12 @@ namespace ProductApi
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
+                .ConfigureAppConfiguration((hostContext, confBuilder) =>
+                {
+                    var environment = hostContext.HostingEnvironment.EnvironmentName;
+                    confBuilder.AddEnvironmentVariables();
+                    confBuilder.AddJsonFile($"appsettings.{environment}.json", true, false);
+                })
                 .ConfigureWebHostDefaults(webBuilder => { webBuilder.UseStartup<Startup>(); });
     }
 }

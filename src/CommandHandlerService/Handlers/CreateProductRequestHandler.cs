@@ -4,10 +4,9 @@ using Common.Commands.ResponseCommands;
 using Common.GatewayService;
 using Common.Models.Data;
 using Common.Models.Gateway;
-using Common.Queries;
 using ProductApi.Data;
 
-namespace RequestHandlerService.Handlers
+namespace CommandHandlerService.Handlers
 {
     public class CreateProductRequestHandler
     {

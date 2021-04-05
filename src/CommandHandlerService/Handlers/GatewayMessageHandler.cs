@@ -1,8 +1,5 @@
-﻿using System;
-using System.Diagnostics.Eventing.Reader;
-using System.Threading;
+﻿using System.Threading;
 using System.Threading.Tasks;
-using Common.Commands;
 using Common.Commands.RequestCommands;
 using Common.GatewayService;
 using Common.Models.Gateway;
@@ -11,7 +8,7 @@ using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using ProductApi.Data;
 
-namespace RequestHandlerService.Handlers
+namespace CommandHandlerService.Handlers
 {
     public class GatewayMessageHandler : BaseMessageHandler
     {

@@ -2,8 +2,7 @@
 
     <PropertyGroup>
         <TargetFramework>net5.0</TargetFramework>
-        <UserSecretsId>dotnet-RequestHandlerService-F43AB195-D80D-4B0D-AE7C-7549B9A4EFF5</UserSecretsId>
-        <RootNamespace>RequestHandlerService</RootNamespace>
+        <RootNamespace>CommandHandlerService</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
@@ -14,6 +13,9 @@
 
     <ItemGroup>
       <Content Update="appsettings.Development.json">
+        <DependentUpon>appsettings.json</DependentUpon>
+      </Content>
+      <Content Update="appsettings.Docker.json">
         <DependentUpon>appsettings.json</DependentUpon>
       </Content>
     </ItemGroup>

@@ -3,7 +3,7 @@ using Common.Options;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
-namespace RequestHandlerService.BackgroundService
+namespace CommandHandlerService.BackgroundService
 {
     public class RequestConsumerService : ConsumerService
     {

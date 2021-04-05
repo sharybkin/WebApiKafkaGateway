@@ -5,6 +5,31 @@ networks:
     driver: bridge
     
 services: 
+  webapi:
+    container_name: webapi
+    depends_on:
+      - "kafka"
+    build: 
+     context: ./
+     dockerfile: src/ProductApi/Dockerfile
+    ports:
+    - "5000:5000"
+    environment:
+     ASPNETCORE_URLS: "http://+:5000"
+     ASPNETCORE_ENVIRONMENT: Docker
+    networks:
+      - kafka_net
+  commandhandlerservice:
+    container_name: commandhandlerservice
+    build: 
+     context: ./src/
+     dockerfile: CommandHandlerService/Dockerfile
+    environment:
+     ASPNETCORE_ENVIRONMENT: Docker
+    networks:
+      - kafka_net
+
+  
   zookeeper:
     image: wurstmeister/zookeeper:latest
     container_name: zookeeper
@@ -25,7 +50,7 @@ services:
       KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
       KAFKA_ADVERTISED_HOST_NAME: kafka
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
     networks: 
       - kafka_net

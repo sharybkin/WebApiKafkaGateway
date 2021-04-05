@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 
 namespace Common.GatewayService
 {
-    public abstract class BaseMessageHandler : IGatewayMessageHandler
+    public abstract class BaseMessageHandler : Common.GatewayService.IGatewayMessageHandler
     {
         private readonly ILogger _logger;
 

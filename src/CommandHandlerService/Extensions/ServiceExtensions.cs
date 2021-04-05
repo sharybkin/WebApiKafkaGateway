@@ -1,12 +1,12 @@
-﻿using Common.GatewayService;
+﻿using CommandHandlerService.BackgroundService;
+using CommandHandlerService.Handlers;
+using Common.GatewayService;
 using Common.Options;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using ProductApi.Data;
-using RequestHandlerService.BackgroundService;
-using RequestHandlerService.Handlers;
 
-namespace RequestHandlerService.Extensions
+namespace CommandHandlerService.Extensions
 {
     public static class ServiceExtensions
     {

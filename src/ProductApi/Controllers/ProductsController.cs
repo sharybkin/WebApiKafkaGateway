@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using Common.Commands.RequestCommands;
 using Common.Models.Data;
 using Common.Queries;
 using MediatR;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ProductApi.Controllers.Models;
 using ProductApi.GatewayService;
@@ -27,6 +29,7 @@ namespace ProductApi.Controllers
         /// Retrieves list of products
         /// </summary>
         /// <returns>Products</returns>
+        [ProducesResponseType(typeof(List<Product>), StatusCodes.Status200OK)]
         [HttpGet]
         public async Task<IActionResult> Get(CancellationToken token)
         {
@@ -42,6 +45,7 @@ namespace ProductApi.Controllers
         /// <param name="productId"></param>
         /// <param name="token"></param>
         /// <returns></returns>
+        [ProducesResponseType(typeof(Product), StatusCodes.Status200OK)]
         [HttpGet("{productId}")]
         public async Task<IActionResult> GetProduct(Guid productId, CancellationToken token)
         {
@@ -55,6 +59,7 @@ namespace ProductApi.Controllers
         /// </summary>
         /// <param name="request"></param>
         /// <returns></returns>
+        [ProducesResponseType(typeof(Product), StatusCodes.Status200OK)]
         [HttpPost("")]
         public async Task<IActionResult> CreateProduct([FromBody] CreateProductRequest request)
         {
